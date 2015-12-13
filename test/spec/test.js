@@ -110,4 +110,27 @@
         })
     });
 
+    /**
+     * @RestParameters
+     * Works with unknown arguments in a function.
+     * will replace arguments.length inside of functions
+     */
+    describe('rest parameters', function () {
+        it('is like varargs', function () {
+
+            let doWork = function (name, ...numbers) {
+                console.log("numbers", numbers);
+                let result = 0;
+                numbers.forEach(function (n) {
+                    result += n;
+                });
+                return result;
+            };
+
+            let result = doWork('don', 1, 2, 3);
+            expect(result).toBe(6);
+
+        })
+    });
+
 })();
