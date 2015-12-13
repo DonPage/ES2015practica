@@ -92,4 +92,22 @@
         });
     });
 
+    /**
+     * @DefaultParameterValues
+     * If caller doesn't pass value for function you can set a default.
+     */
+    describe('default parameters', function () {
+        it('provides defaults', function () {
+
+            let getName = function (name='Don') {
+                return name;
+            };
+
+            let result = getName();
+
+            expect(result).toBe('Don');
+
+        })
+    });
+
 })();
