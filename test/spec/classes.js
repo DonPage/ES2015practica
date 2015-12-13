@@ -1,6 +1,3 @@
-/**
- * Created by DivineDon on 12/13/2015.
- */
 (function () {
     'use strict';
 
