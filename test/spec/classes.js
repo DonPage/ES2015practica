@@ -1,22 +1,30 @@
 /**
  * Created by DivineDon on 12/13/2015.
  */
-/**
- * @SpreadOperator
- * Spread array over individual parameters.
- */
-describe('spread parameters', function () {
-    it('can spread an array across parameters', function () {
+(function () {
+    'use strict';
 
-        let doWork = function (x, y, z) {
-            return x + y + z;
-        };
-        let otherArray = [2, 3];
-        let array = [1, ...otherArray];
-        console.log("array", array);
-        var result = doWork(...array);
+    /**
+     * @Classes
+     */
+    describe('the class keyword', function () {
+        it('can create a class', function () {
 
-        expect(result).toBe(6);
+            class Employee {
+                doWork() {
+                    return 'complete!';
+                }
 
-    })
-});
+                getName() {
+                    return 'Don';
+                }
+            }
+
+            let e = new Employee();
+
+            expect(e.doWork()).toBe('complete!');
+            expect(e.getName()).toBe('Don');
+
+        })
+    });
+})();
